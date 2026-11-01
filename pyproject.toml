@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bibliothek"
+version = "1.0.0"
+description = "Beispielprojekt für die Vorlesung Continuous Integration (SWE 1.2)"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# E/W: Stil (pycodestyle), F: echte Fehler (pyflakes), I: Import-Reihenfolge, B: typische Bugs
+select = ["E", "W", "F", "I", "B"]
