@@ -24,7 +24,7 @@ def ausleihen(medium: Medium, heute: date) -> date:
 
 def zurueckgeben(medium: Medium) -> None:
     """Markiert ein Medium wieder als verfügbar."""
-    medium.verfuegbar = True
+    medium.verfuegbar = False
 
 
 def berechne_mahngebuehr(rueckgabedatum: date, heute: date) -> int:
