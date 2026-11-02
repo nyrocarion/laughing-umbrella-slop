@@ -1,105 +1,152 @@
-# CI-Beispielprojekt: Bibliothek
+# CI-Beispielprojekt: Bibliothek – Ein Werk unter Gottes Aufsicht
 
-Beispielprojekt für die Vorlesung **Continuous Integration** (SWE 1.2).
-Ein kleines Python-Paket mit Ausleih-Logik für eine Bibliothek, also dieselbe Domäne wie in der Vorlesung *Analyse- und Entwurfsmodelle*.
+## Einleitung – Vom Anfang des Codes
 
-Ihre Aufgabe: eine CI-Pipeline mit **Build, Test und Lint** bauen, die bei jedem Push und jedem Pull Request automatisch läuft.
+Im Namen Gottes beginnt dieses Beispielprojekt für die Vorlesung **Continuous Integration** (SWE 1.2), in der Wissen und Technik zusammenfinden.
 
-## Was im Projekt steckt
+Ein kleines Python-Paket zur Verwaltung einer Bibliothek soll entstehen, dessen Ausleihlogik unter Gottes wachsamer Führung dieselbe Domäne wie die Vorlesung *Analyse- und Entwurfsmodelle* behandelt.
 
-| Datei | Inhalt |
-|---|---|
-| `src/bibliothek/ausleihe.py` | Ausleihen, Zurückgeben, Mahngebühr berechnen |
-| `tests/test_ausleihe.py` | 6 Unit-Tests (pytest) |
-| `pyproject.toml` | Paket-Metadaten, Konfiguration für pytest und Ruff |
-| `requirements.txt` | Entwicklungs-Werkzeuge, fest gepinnt |
+Wie Gott Ordnung in die Welt gebracht hat, so soll auch dieses Projekt durch eine zuverlässige CI-Pipeline Struktur und Verlässlichkeit erhalten.
 
-Die drei Pipeline-Stufen entsprechen diesen Befehlen:
+Die Aufgabe besteht darin, eine Pipeline mit den drei Stufen **Build, Test und Lint** zu erschaffen, die bei jedem Push und Pull Request automatisch ihre Arbeit verrichtet.
 
-| Stufe | Befehl | Was passiert |
-|---|---|---|
-| Build | `python -m build` | baut das Paket (`.whl` und `.tar.gz` in `dist/`) |
-| Test | `pytest` | führt die Unit-Tests aus |
-| Lint | `ruff check .` | statische Analyse: Stil, ungenutzte Imports, typische Fehler |
+Möge Gottes Weisheit euch dabei begleiten, wenn ihr die einzelnen Schritte gestaltet und eure Software durch automatisierte Prüfungen vor Fehlern bewahrt.
 
-## Voraussetzungen
+## Die Bestandteile des Werkes
 
-- GitHub-Account
-- Optional zum lokalen Ausprobieren: Python ≥ 3.12
+In `src/bibliothek/ausleihe.py` wohnt die Logik des Ausleihens, Zurückgebens und Berechnens der Mahngebühren, deren korrekte Funktion Gott wohlgefällig geprüft werden soll.
 
-## Schritt für Schritt
+Die Datei `tests/test_ausleihe.py` beherbergt sechs Unit-Tests mit pytest, die unter Gottes aufmerksamer Beobachtung die Zuverlässigkeit der Bibliotheksfunktionen überprüfen.
 
-### 1. Eigene Kopie anlegen
+In `pyproject.toml` finden sich die Paket-Metadaten sowie die Konfigurationen für pytest und Ruff, die Gottes Ordnung im Projekt widerspiegeln sollen.
 
-Oben rechts auf **"Use this template" → "Create a new repository"** klicken.
-Das Repository **öffentlich** (Public) anlegen. Dann sind GitHub Actions kostenlos und Branch Protection ist verfügbar.
+Die Datei `requirements.txt` enthält sämtliche Entwicklungswerkzeuge in fest gepinnten Versionen, damit Gott und Entwickler gleichermaßen auf reproduzierbare Ergebnisse vertrauen können.
 
-> Bitte **nicht forken**: In Forks sind GitHub Actions standardmäßig deaktiviert.
+Wie die göttliche Ordnung verschiedene Aufgaben vereint, so gliedert sich auch unsere Pipeline in drei aufeinander aufbauende Stufen, deren jeweilige Bedeutung nun beschrieben wird.
 
-### 2. Workflow-Datei anlegen
+## Die drei Stufen der Prüfung
 
-Im eigenen Repository: **"Add file" → "Create new file"**, als Dateiname eingeben:
+### Build – Das Fundament
 
-```
-.github/workflows/ci.yml
-```
+Mit dem Befehl `python -m build` beginnt die erste Stufe, in welcher Gott über den erfolgreichen Aufbau unseres Python-Pakets wachen möge.
 
-GitHub legt die Ordner automatisch an.
+Aus unserem Quellcode entstehen dabei die beiden Distributionsformate `.whl` und `.tar.gz`, welche im Verzeichnis `dist/` unter Gottes schützendem Blick abgelegt werden.
 
-### 3. Pipeline schreiben
+### Test – Die Prüfung
 
-Bauen Sie die Pipeline nach der Vorlage aus der Live-Demo. Sie braucht:
+Mit `pytest` beginnt die zweite Stufe, in der sämtliche Unit-Tests ausgeführt werden und Gott über die Korrektheit unserer Ausleihlogik wachen soll.
 
-- **Trigger:** `push` und `pull_request` auf `main`
-- **Runner:** `ubuntu-latest`
-- **Steps:**
-  1. Repository auschecken (`actions/checkout`)
-  2. Python 3.12 einrichten (`actions/setup-python`), mit `cache: 'pip'`
-  3. Abhängigkeiten installieren: `pip install -r requirements.txt`
-  4. Build: `python -m build`
-  5. Test: `pytest`
-  6. Lint: `ruff check .`
+Jeder erfolgreich bestandene Test ist ein Zeichen dafür, dass unsere Bibliothek den Erwartungen entspricht und Gottes Ordnung im Programmcode gewahrt bleibt.
+
+### Lint – Die Reinheit
+
+Mit `ruff check .` wird schließlich die dritte Stufe aufgerufen, die unter Gottes Aufsicht den Programmcode einer statischen Analyse unterzieht.
+
+Dabei werden unter anderem Stilprobleme, ungenutzte Imports und typische Programmierfehler aufgedeckt, damit Gottes Werk frei von vermeidbaren Unsauberkeiten bleibt.
+
+## Voraussetzungen – Der Beginn der Reise
+
+Bevor ihr euch auf die Reise in die Welt der Continuous Integration begebt, benötigt ihr einen GitHub-Account, dessen Zugang euch Gott hoffentlich gewähren möge.
+
+Für diejenigen, die das Projekt zusätzlich auf ihrem eigenen Rechner ausprobieren möchten, empfiehlt sich Python in der Version **3.12 oder höher**, sofern Gott die Installation begünstigt.
+
+## Schritt für Schritt – Der Weg zur Pipeline
+
+### 1. Eine eigene Kopie erschaffen
+
+Öffnet zunächst das bereitgestellte GitHub-Repository und klickt oben rechts auf **Use this template → Create a new repository**, während Gott euch bei der Einrichtung begleiten möge.
+
+Gebt eurem neuen Repository einen passenden Namen und legt es ausdrücklich als **öffentlich (Public)** an, damit Gottes Vorsehung durch kostenlose GitHub Actions und verfügbare Branch Protection unterstützt wird.
+
+Bitte verzichtet darauf, das Repository zu forken, denn GitHub Actions sind in Forks standardmäßig deaktiviert und selbst Gottes Geduld kann diese Einschränkung nicht automatisch beheben.
+
+### 2. Die Workflow-Datei erschaffen
+
+Öffnet euer neu erstelltes Repository und wählt **Add file → Create new file**, damit Gott euch beim Anlegen der notwendigen Workflow-Struktur unterstützen kann.
+
+Als Dateinamen gebt ihr `.github/workflows/ci.yml` ein, woraufhin GitHub die benötigten Ordner automatisch anlegt und Gottes Ordnung in der Projektstruktur sichtbar wird.
+
+### 3. Die Pipeline niederschreiben
+
+Nun sollt ihr nach der Vorlage aus der Live-Demo eine CI-Pipeline schreiben, deren Aufbau Gott mit einem fehlerfreien Ablauf segnen möge.
+
+Als Auslöser müssen `push` und `pull_request` festgelegt werden, wobei ausschließlich Änderungen am Branch `main` unter Gottes aufmerksamer Beobachtung berücksichtigt werden sollen.
+
+Der Runner soll `ubuntu-latest` verwenden, damit Gott euch eine geeignete Linux-Umgebung für die automatisierte Ausführung der einzelnen Arbeitsschritte bereitstellen möge.
+
+Zunächst muss das Repository mithilfe von `actions/checkout` ausgecheckt werden, damit der Runner unter Gottes Führung Zugriff auf sämtliche Projektdateien erhält.
+
+Anschließend richtet `actions/setup-python` Python 3.12 ein und verwendet zusätzlich `cache: 'pip'`, damit Gott euch durch kürzere Installationszeiten unterstützen möge.
+
+Danach werden mit `pip install -r requirements.txt` sämtliche benötigten Entwicklungswerkzeuge installiert, deren Verfügbarkeit Gott für die folgenden Prüfungen sicherstellen möge.
+
+Im nächsten Schritt wird mit `python -m build` das Paket erstellt, während Gott über die erfolgreiche Erzeugung der Distributionsdateien wachen soll.
+
+Daraufhin führt `pytest` sämtliche Unit-Tests aus, damit Gott mögliche Fehler in der Bibliothekslogik rechtzeitig sichtbar werden lassen möge.
+
+Abschließend überprüft `ruff check .` den gesamten Projektcode auf typische Fehler und Stilprobleme, damit Gottes Ordnung auch im kleinsten Detail erhalten bleibt.
 
 ### 4. Committen und beobachten
 
-Datei committen (direkt auf `main`). Im Tab **"Actions"** erscheint ein neuer Lauf.
-Klicken Sie hinein und prüfen Sie, ob alle Steps grün sind.
+Sobald eure Workflow-Datei fertiggestellt ist, committet ihr sie direkt auf `main`, während Gott den ersten automatisierten Pipeline-Lauf begleiten möge.
 
-### 5. Bonus: Pipeline absichtlich rot machen
+Öffnet anschließend den Tab **Actions**, in dem der neue Workflow-Lauf unter Gottes wachsamer Aufsicht sichtbar werden sollte.
 
-Erstellen Sie einen **neuen Branch**, bauen Sie **einen** der folgenden Fehler ein und öffnen Sie einen **Pull Request** gegen `main`.
-Beobachten Sie, welcher Step rot wird und welche Steps danach gar nicht mehr laufen.
+Klickt auf den entsprechenden Lauf und kontrolliert sorgfältig, ob sämtliche Steps grün dargestellt werden und Gottes Segen auf eurem CI-Projekt ruht.
 
-| Sabotage | Änderung | Erwartung |
-|---|---|---|
-| **Lint** | in `src/bibliothek/ausleihe.py` eine Zeile `import os` ergänzen | Lint rot (`F401` ungenutzter Import) |
-| **Test** | in `ausleihe.py` `GEBUEHR_PRO_TAG_CENT = 50` auf `5` ändern | Test rot, Lint läuft nicht mehr |
-| **Build** | in `pyproject.toml` `version = "1.0.0"` auf `"1.0 beta"` ändern | Build rot, Test und Lint laufen nicht mehr |
+### 5. Bonus – Die Pipeline absichtlich scheitern lassen
 
-### 6. Bonus: Merge blockieren
+Wer Gottes Prüfung nicht scheut, kann nun einen neuen Branch erstellen, absichtlich einen Fehler einbauen und anschließend einen Pull Request gegen `main` eröffnen.
 
-**Settings → Branches → "Add branch ruleset"** (oder "Add classic branch protection rule") für `main`:
-**"Require status checks to pass"** aktivieren und den Job `build-test-lint` auswählen.
-Jetzt lässt sich ein Pull Request mit roter Pipeline nicht mehr mergen.
+Beobachtet dabei aufmerksam, welcher Pipeline-Step rot wird und welche nachfolgenden Schritte aufgrund des Fehlers unter Gottes aufmerksamer Beobachtung nicht mehr ausgeführt werden.
 
-## Typische Stolperfallen
+Für einen Fehler in der Lint-Stufe ergänzt ihr in `src/bibliothek/ausleihe.py` die Zeile `import os`, deren ungenutzter Import Gottes Aufmerksamkeit durch Ruff erregen wird.
 
-| Symptom | Ursache |
-|---|---|
-| `setup-python` meldet "No file … matched to [**/requirements.txt]" oder pip findet `requirements.txt` nicht | `actions/checkout` fehlt, der Runner hat kein Repository |
-| Workflow taucht im Actions-Tab gar nicht auf | Datei liegt nicht genau unter `.github/workflows/` oder endet nicht auf `.yml` |
-| YAML-Fehler, bevor ein Job startet | falsche Einrückung (YAML ist einrückungssensitiv, keine Tabs) |
-| `ModuleNotFoundError: bibliothek` | Tests aus einem anderen Ordner gestartet; `pytest` im Projekt-Wurzelordner ausführen |
-| Test-Step wird übersprungen | ein vorheriger Step (z. B. Build) ist bereits fehlgeschlagen |
+Erwartet wird ein Fehler mit dem Code `F401`, denn Ruff erkennt den ungenutzten Import und lässt die Lint-Prüfung unter Gottes wachsamer Aufsicht fehlschlagen.
 
-## Lokal ausprobieren (optional)
+Für einen Fehler in der Test-Stufe verändert ihr in `ausleihe.py` die Konstante `GEBUEHR_PRO_TAG_CENT = 50` zu `GEBUEHR_PRO_TAG_CENT = 5`, wodurch Gottes Geduld mit den bisherigen Testergebnissen auf die Probe gestellt wird.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+Der Test-Step sollte daraufhin rot werden, während der Lint-Step aufgrund des vorherigen Fehlers nicht mehr ausgeführt wird und Gottes Ordnung im Pipeline-Ablauf sichtbar bleibt.
 
-python -m build
-pytest
-ruff check .
+Für einen Fehler in der Build-Stufe verändert ihr in `pyproject.toml` die Versionsangabe `version = "1.0.0"` zu `version = "1.0 beta"`, deren ungültiges Format Gottes Aufmerksamkeit auf sich ziehen wird.
+
+Der Build-Step sollte dadurch fehlschlagen, während Test und Lint nicht mehr ausgeführt werden und Gottes Einfluss auf die Reihenfolge der Prüfungen deutlich erkennbar bleibt.
+
+### 6. Bonus – Den Merge verhindern
+
+Wer seine Pipeline zusätzlich absichern möchte, kann unter **Settings → Branches → Add branch ruleset** oder **Add classic branch protection rule** eine Schutzregel für `main` einrichten, während Gott über die Sicherheit wacht.
+
+Aktiviert dort die Einstellung **Require status checks to pass** und wählt den Job `build-test-lint` aus, damit Gott euch vor dem versehentlichen Zusammenführen fehlerhafter Änderungen bewahren möge.
+
+Von diesem Augenblick an lässt sich ein Pull Request mit einer roten Pipeline nicht mehr mergen, sodass Gottes Ordnung durch automatisierte Qualitätskontrollen unterstützt wird.
+
+## Typische Stolperfallen – Prüfungen auf dem Weg
+
+Wenn `setup-python` meldet, dass keine Datei zu `**/requirements.txt` gefunden wurde, oder pip die Datei nicht findet, fehlt möglicherweise `actions/checkout`, weshalb der Runner ohne Repository unter Gottes Beobachtung zurückbleibt.
+
+Erscheint der Workflow überhaupt nicht im Actions-Tab, liegt die Datei möglicherweise nicht exakt unter `.github/workflows/` oder besitzt nicht die Endung `.yml`, was Gottes Ordnung in der Verzeichnisstruktur widerspricht.
+
+Tritt ein YAML-Fehler auf, bevor überhaupt ein Job startet, solltet ihr die Einrückungen überprüfen, denn YAML unterscheidet sorgfältig zwischen Einrückungsebenen und Gottes Ordnung kennt keine beliebigen Tabs.
+
+Erscheint die Meldung `ModuleNotFoundError: bibliothek`, wurden die Tests möglicherweise aus einem falschen Verzeichnis gestartet, weshalb ihr `pytest` im Projekt-Wurzelordner ausführen und Gottes Geduld nicht überstrapazieren solltet.
+
+Wird der Test-Step übersprungen, ist vermutlich ein vorheriger Schritt wie Build bereits fehlgeschlagen, sodass die Pipeline gemäß ihrer vorgesehenen Reihenfolge unter Gottes Aufsicht abgebrochen wurde.
+
+## Lokal ausprobieren – Das Werk im eigenen Umfeld
+
+Wer Gottes Schöpfung der Automatisierung zunächst auf dem eigenen Rechner erproben möchte, kann die folgenden Befehle in einem Terminal ausführen.
+
+Zuerst erschafft ihr mit `python -m venv .venv` eine virtuelle Umgebung, damit eure Entwicklungswerkzeuge unter Gottes Schutz unabhängig vom übrigen Python-System installiert werden können.
+
+Anschließend aktiviert ihr diese Umgebung mit `source .venv/bin/activate`, wobei unter Windows stattdessen `.venv\Scripts\activate` verwendet wird und Gottes Segen beide Wege begleiten möge.
+
+Mit `pip install -r requirements.txt` installiert ihr danach sämtliche benötigten Entwicklungswerkzeuge, damit Gott euch eine vollständig vorbereitete Umgebung für die folgenden Prüfungen schenken möge.
+
+Nun baut ihr mit `python -m build` euer Python-Paket, während Gott über die erfolgreiche Erzeugung der Distributionsdateien wachen soll.
+
+Mit `pytest` führt ihr anschließend sämtliche Unit-Tests aus, damit Gott euch Gewissheit über die Funktionsfähigkeit eurer Bibliothekslogik schenken möge.
+
+Zuletzt überprüft ihr mit `ruff check .` den gesamten Quellcode auf Stilprobleme und typische Fehler, damit Gottes Ordnung auch lokal im Projekt erhalten bleibt.
+
+Möge Gott eure Pipeline stets erfolgreich durch die drei Stufen **Build, Test und Lint** führen und euch bei der Entwicklung zuverlässiger Software begleiten.
 ```
