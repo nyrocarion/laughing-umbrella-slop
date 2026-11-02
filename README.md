@@ -149,4 +149,5 @@ Mit `pytest` führt ihr anschließend sämtliche Unit-Tests aus, damit Gott euch
 Zuletzt überprüft ihr mit `ruff check .` den gesamten Quellcode auf Stilprobleme und typische Fehler, damit Gottes Ordnung auch lokal im Projekt erhalten bleibt.
 
 Möge Gott eure Pipeline stets erfolgreich durch die drei Stufen **Build, Test und Lint** führen und euch bei der Entwicklung zuverlässiger Software begleiten.
-```
+
+# Amen.
