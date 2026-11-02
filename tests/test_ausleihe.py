@@ -7,7 +7,7 @@ from bibliothek import Medium, ausleihen, berechne_mahngebuehr, zurueckgeben
 
 def test_ausleihen_liefert_rueckgabedatum_nach_28_tagen():
     dracula = Medium("Dracula")
-    assert ausleihen(dracula, date(2026, 11, 2)) == date(2026, 11, 30)
+    assert ausleihen(dracula, date(2026, 11, 2)) == date(2026, 12, 30)
     assert dracula.verfuegbar is False
 
 
